@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication System</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div class="container">
+        <div class="theme-toggle">
+            <button id="themeToggle" aria-label="Toggle theme">
+                <span class="light-icon">🌞</span>
+                <span class="dark-icon">🌜</span>
+            </button>
+        </div>
+        <div class="forms-container">
+            <!-- Login Form -->
+            <form id="loginForm" class="form">
+                <h2>Login</h2>
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" id="showRegister">Register here</a></p>
+            </form>
+
+            <!-- Registration Form -->
+            <form id="registerForm" class="form hidden">
+                <h2>Register</h2>
+                <input type="text" id="registerName" placeholder="Name" required>
+                <input type="email" id="registerEmail" placeholder="Email" required>
+                <input type="password" id="registerPassword" placeholder="Password" required>
+                <button type="submit">Register</button>
+                <p>Already have an account? <a href="#" id="showLogin">Login here</a></p>
+            </form>
+
+            <!-- User Dashboard -->
+            <div id="userDashboard" class="form hidden">
+                <h2>Welcome, <span id="userName"></span>!</h2>
+                <div class="dashboard-content">
+                    <h3>Profile Information</h3>
+                    <p>Name: <span id="profileName"></span></p>
+                    <p>Email: <span id="profileEmail"></span></p>
+                </div>
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>
